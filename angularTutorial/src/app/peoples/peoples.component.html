@@ -1,0 +1,46 @@
+<!-- <div *ngIf="selectedPeople">
+  <h2>{{selectedPeople.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedPeople.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedPeople.name" placeholder="name">
+    </label>
+  </div>
+</div> -->
+
+
+<h2>My Peoples</h2>
+<!-- <ul class="peoples">
+  <li *ngFor="let people of peoples"  
+    [class.selected]="people === selectedPeople"
+    (click)="onSelect(people)">
+    <span class="badge">{{people.id}}</span> {{people.name}}
+  </li>
+</ul> -->
+
+<div>
+  <label>People name: 
+    <input type="text" name="peopleName" #peopleName>
+  </label>
+ 
+  <button (click)="addPeople(peopleName.value); peopleName.value=''"  >ADD</button>
+</div>
+
+<ul class="peoples">
+  <li *ngFor="let people of peoples">
+    <a routerLink="/detail/{{people.id}}">
+      <span class="badge"> {{people.id}}</span> {{people.name}}
+    </a>
+    <button class="delete" (click)="delePeople(people)">Delete</button>
+  </li>
+</ul>
+
+
+<!-- <app-people-detail [people]="selectedPeople"></app-people-detail> -->
+
+
+
+  
+
+
+

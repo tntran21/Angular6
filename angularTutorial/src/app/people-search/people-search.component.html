@@ -1,0 +1,11 @@
+<div id="search">
+  <h3>Search name</h3>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" placeholder="Search...">
+
+  <ul class="search-result">
+    <!-- peoples$ | async: $ la mot quy uoc peoples$ la 1 Obvervable khong phai la mot mang -->
+    <li *ngFor="let people of peoples$ | async">
+      <a routerLink='/detail/{{people.id}}'>{{people.name}}</a>
+    </li>
+  </ul>
+</div>
