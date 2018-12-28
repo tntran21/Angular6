@@ -10,7 +10,8 @@ export class UsersComponent implements OnInit {
   user: User = {
     id: 1,
     name: 'Tran Ngan',
-    password: 'abc123'
+    email: 'nganttt@gmail.com',
+    age: 18
   }
   constructor() { }
 

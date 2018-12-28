@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-6 offset-3">
+        <h1 class="text-center mt-2">Login</h1>
+          <form class="form-group" [formGroup]="loginForm" >
+            <label for='username'>UserName</label>
+            <input class="form-control" type="text" name="username" id="username" [formControl]="userName" placeholder="user name">
+            <!-- Validate cho username:  -->
+            <div class="alert alert-warning" [hidden]="userName.valid  || userName.untouched">
+              <div [hidden]="!userName.hasError('required')">User name không được bỏ trống</div>
+              <div [hidden]="!userName.hasError('minlength')">User name không được dưới 5 ký tự</div>
+            </div>
+          
+            <label for='password'>Password</label>
+            <input class="form-control" type="text" name="password" id="password" [formControl]="password" placeholder="password">
+            <!-- Validate cho password -->
+            <div class="alert alert-warning" [hidden]="password.valid || password.untouched">
+              <div [hidden]="!password.hasError('required')">Password không được bỏ trống</div>
+              <div [hidden]="!password.hasError('ampersandRequired')">Password phải chứa ký tự '&'</div>
+            </div>
+          
+            <!-- Validate cho btn submit -->
+            <!-- <a routerLink="/list" class="btn btn-primary mt-2" (click)="login()" [disabled]="!loginForm.valid">Login</a> -->
+            <button routerLink="/list" type="submit" (click)="login()" class="btn btn-primary mt-2 " [disabled]="!loginForm.valid">Login</button>
+          </form>
+      </div>
+  </div>
+</div>
