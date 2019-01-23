@@ -1,0 +1,28 @@
+<div class="inner container">
+	<!-- <div *ngIf="hero"> -->
+		<!-- <h2>Xin chào: {{selectedHero.name}}</h2>
+	  	<label>Tên:
+	    	<input class="form-control" [(ngModel)]="selectedHero.name" placeholder="Name">
+	  	</label> -->
+
+	  	<!-- Truyền dữ liệu giữa các component -->
+	  	<!-- <app-hero-detail [hero] ="selectedHero"></app-hero-detail> -->
+	<!-- </div>
+	 -->
+
+  	<!-- ngFor -->
+  	<div class="row">
+  		<ul class="list__hero list-group col-md-5 col-12">
+	  		<li class="list-group-item" *ngFor="let i of heroes">
+	  			<a routerLink="/detail/{{i.id}}">
+	  				<span class="badge badge-secondary">{{i.id}}</span> {{i.name}}
+	  			</a>
+	  		</li>
+	  	</ul>
+		<div class="col-md-5 col-12 offset-md-2 float-right">
+			<app-messages></app-messages>
+		</div>
+	  	
+  	</div>
+  
+</div>

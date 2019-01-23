@@ -1,0 +1,11 @@
+<div class="container">
+	<h3 class="pb-3">TOP HEROES</h3>
+	<div class="row">
+		<div class="d-flex justify-content-between col-md-12 col-sm-12 col-12">
+			<a class="card list col-md-3 col-sm-3 col-12 text-center" *ngFor="let i of heroes" routerLink="/detail/{{i.id}}">
+				<h5>{{i.name}}</h5>
+			</a>
+		</div>
+
+	</div>
+</div>
