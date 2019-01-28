@@ -1,0 +1,25 @@
+.list__hero {
+	list-style: none;
+}
+.list__hero li {
+	cursor: pointer;
+	background: #B2DFDB;	
+}
+.list__hero li a {
+	color: #000;
+	text-decoration: none;
+}
+.list__hero li:hover {
+	background: #00695C;
+	color: #fff;
+	border-color: #43181c;
+}
+.list__hero li:hover a {
+	color: #fff;
+}
+.list__hero li:hover .badge {
+	/*font-size: 120%;*/
+}
+.delete {
+	cursor: pointer;
+}

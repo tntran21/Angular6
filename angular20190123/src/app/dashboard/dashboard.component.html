@@ -1,0 +1,17 @@
+<div class="container">
+	<h3 class="pb-3">TOP HEROES</h3>
+	<div class="row">
+		<div class="d-sm-flex justify-content-between d-block col-md-12 col-sm-12 col-12">
+			<div class="card list col-md-3 col-sm-3 col-12 text-center" *ngFor="let i of heroes" routerLink="/detail/{{i.id}}">
+				<img class="card-img-top" src="{{i.img}}">
+				<div class="card-body">
+					<h5 class="card-title">{{i.name}}</h5>
+				</div>
+			</div>
+			<!-- <a class="card list col-md-3 col-sm-3 col-12 text-center" *ngFor="let i of heroes" routerLink="/detail/{{i.id}}">
+				<h5>{{i.name}}</h5>
+			</a> -->
+		</div>
+	
+	</div>
+</div>

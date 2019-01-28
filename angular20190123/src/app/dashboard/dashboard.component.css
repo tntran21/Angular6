@@ -1,0 +1,15 @@
+.list {
+	padding: 20px 0;
+	text-decoration: none;
+	background: #263238;
+	color: #fff;
+	padding-top: 0;
+	cursor: pointer;
+}
+.list img {
+	height: 256px;
+}
+.list:hover {
+	background: #455A64;
+	border-color: #3E2723;
+}

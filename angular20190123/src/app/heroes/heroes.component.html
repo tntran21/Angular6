@@ -1,0 +1,53 @@
+<div class="inner container">
+	<!-- <div *ngIf="hero"> -->
+		<!-- <h2>Xin chào: {{selectedHero.name}}</h2>
+	  	<label>Tên:
+	    	<input class="form-control" [(ngModel)]="selectedHero.name" placeholder="Name">
+	  	</label> -->
+
+	  	<!-- Truyền dữ liệu giữa các component -->
+	  	<!-- <app-hero-detail [hero] ="selectedHero"></app-hero-detail> -->
+	<!-- </div>
+	 -->
+
+  	<!-- ngFor -->
+  	<div class="row">
+  		<div class="col-md-5 col-12">
+  			<h3>Thêm HERO</h3>
+  			<form >
+  				<div class="form-group">
+			  		<label>Nhập Tên: </label>
+			  		<input type="text" class="form-control" placeholder="Nhập tên" #heroName>
+			  		<label>Nhập tuổi: </label>
+			  		<input type="number" class="form-control" placeholder="Nhập tuổi" #heroAge>
+					<input class="form-control" type="text" #heroImg placeholder="img">
+			  	</div>
+			  	<div>
+			  		<button class="btn btn-primary" (click)="addHero(heroName.value, heroAge.value, heroImg.value); heroName.value=''; heroAge.value=''; heroImg.value=''">Thêm</button>
+			  	</div>
+		  		
+  			</form>
+		  	
+		  	<div class="mt-4">
+		  		<app-messages></app-messages>
+		  	</div>
+		  	
+  		</div>
+  		
+
+		<div class="col-md-5 col-12 offset-md-2 float-right">
+			<h3>Danh sách HERO</h3>
+			<ul class="list__hero list-group ">
+		  		<li class="list-group-item" *ngFor="let i of heroes"  routerLink="/detail/{{i.id}}">
+		  			<a>
+		  				<span class="badge badge-secondary">{{i.id}}</span> {{i.name}}
+		  			</a>
+		  			<button class="badge badge-danger delete" (click)="deleHero(i)">Xóa</button>
+		  		</li>
+		  	</ul>
+			
+		</div>
+	  	
+  	</div>
+  
+</div>
